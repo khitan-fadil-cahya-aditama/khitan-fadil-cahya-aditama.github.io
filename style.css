@@ -1,0 +1,265 @@
+/* Tema Warna Islamic Modern */
+:root {
+    --primary-green: #0f4c3a; /* Hijau Zamrud gelap */
+    --gold: #d4af37; /* Emas elegan */
+    --gold-light: #f3e5ab;
+    --bg-cream: #fbf9f1; /* Krem / Off-white */
+    --text-dark: #2c3e50;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Mobile Wrapper */
+body::before {
+    content: "";
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--bg-cream);
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+}
+
+main { max-width: 500px; margin: 0 auto; background-color: var(--bg-cream); overflow: hidden; }
+.hidden { display: none !important; }
+
+/* Typography */
+.title-font { font-family: 'Cinzel', serif; }
+h1 { font-size: 2.5rem; color: var(--primary-green); margin: 15px 0; }
+h2 { font-size: 1.8rem; margin-bottom: 20px; text-align: center; }
+.gold-text { color: var(--gold); }
+.arabic { font-family: 'Amiri', serif; font-size: 2rem; margin-bottom: 15px; text-align: center; line-height: 1.5; }
+.salam { font-weight: 600; margin-bottom: 10px; color: var(--primary-green); text-align: center; }
+.invitation-text { font-size: 0.95rem; margin-bottom: 20px; text-align: center; line-height: 1.6; opacity: 0.8; }
+.translation { font-style: italic; opacity: 0.9; margin-bottom: 15px; text-align: center; }
+
+/* Cover Page dengan Pattern Geometris Tipis */
+.cover-page {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(15, 76, 58, 0.95), rgba(15, 76, 58, 0.95)), url('https://www.transparenttextures.com/patterns/arabesque.png');
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1000; transition: transform 0.8s ease-in-out, opacity 0.8s ease;
+}
+.cover-page.slide-up-out { transform: translateY(-100%); opacity: 0; }
+.cover-content { 
+    text-align: center; padding: 40px 20px; 
+    border: 2px solid var(--gold); border-radius: 150px 150px 10px 10px;
+    background: rgba(251, 249, 241, 0.1); backdrop-filter: blur(5px);
+}
+.cover-content h1 { color: var(--gold-light); }
+.to-guest { margin: 20px 0; color: white; font-size: 0.9rem; }
+
+/* Buttons */
+.btn {
+    padding: 12px 24px; border-radius: 25px; font-size: 1rem; cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+    border: none; transition: all 0.3s ease; text-decoration: none; display: inline-block;
+}
+.btn-gold {
+    background: linear-gradient(135deg, var(--gold), #b8860b);
+    color: white; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6); }
+
+/* Tombol Musik Melayang */
+.music-btn {
+    position: fixed; bottom: 20px; right: 20px;
+    width: 50px; height: 50px; border-radius: 50%;
+    background-color: var(--gold); color: white;
+    border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 1.2rem; cursor: pointer; z-index: 999;
+    display: flex; align-items: center; justify-content: center;
+    animation: spin 4s linear infinite;
+}
+.music-btn.paused { animation: none; background-color: #ccc; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Sections & Elements */
+.section { padding: 60px 20px; text-align: center; }
+.green-bg { background-color: var(--primary-green); color: white; }
+.pattern-bg { background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-blend-mode: multiply; }
+
+/* Arch Design untuk Gambar (Bentuk Kubah) */
+.arch-img {
+    width: 220px; height: 280px; object-fit: cover;
+    border-radius: 110px 110px 10px 10px; /* Bentuk lengkungan di atas */
+    border: 4px solid var(--gold); padding: 5px; margin-bottom: 20px;
+    background-color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.arch-img-small {
+    width: 100%; height: 200px; object-fit: cover;
+    border-radius: 80px 80px 10px 10px; border: 2px solid var(--gold);
+}
+
+.card { 
+    background: white; padding: 30px 20px; border-radius: 20px; 
+    border-top: 5px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    margin-top: 30px;
+}
+.card hr { margin: 15px 0; border: 0; border-top: 1px solid rgba(212, 175, 55, 0.3); }
+
+/* Gallery Grid */
+.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+/* Animasi */
+.animate-on-scroll { opacity: 0; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.fade-in.is-visible { opacity: 1; }
+.slide-up { transform: translateY(40px); }
+.slide-up.is-visible { opacity: 1; transform: translateY(0); }
+.zoom-in { transform: scale(0.9); }
+.zoom-in.is-visible { opacity: 1; transform: scale(1); }
+
+/* --- Tambahan untuk Lokasi, Maps & Amplop Digital --- */
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 3px solid var(--gold);
+}
+
+.account-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    color: var(--text-dark);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+.btn-outline:hover, .btn-outline.copied {
+    background: var(--gold);
+    color: white;
+}
+
+/* Mengatur form agar serasi dengan card desain */
+form.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+form input, form select, form textarea {
+    padding: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.4); /* Border warna emas transparan */
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* --- Animasi Lampion Gantung --- */
+.lampion-ornament {
+    position: fixed; /* Gunakan absolute jika hanya ingin di cover page */
+    top: -10px; /* Sedikit ditarik ke atas agar talinya terlihat natural menempel */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; 
+    max-width: 500px; /* Menyesuaikan batas lebar mobile undangan */
+    max-height: 250px;
+    object-fit: cover;
+    object-position: top;
+    z-index: 1001; /* Pastikan berada di atas elemen lain */
+    pointer-events: none; /* Agar gambarnya tidak menghalangi saat user mengklik tombol/layar */
+    
+    /* Titik poros ayunan ada di bagian atas tengah gambar */
+    transform-origin: top center; 
+    
+    /* Panggil animasi 'sway' */
+    animation: sway 5s ease-in-out infinite alternate;
+}
+
+/* Keyframes untuk efek berayun */
+@keyframes sway {
+    0% { 
+        transform: translateX(-50%) rotate(-3deg); 
+    }
+    100% { 
+        transform: translateX(-50%) rotate(3deg); 
+    }
+}
+
+/* --- Floating Ornaments --- */
+.floating-ornament {
+    position: fixed;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.4;
+    animation: float-around var(--duration) linear infinite;
+}
+
+@keyframes float-around {
+    0% {
+        transform: translate(0, 100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.4;
+    }
+    90% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(var(--drift), -100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Floating Animation for Elements */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Pulse Animation */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.slide-left { transform: translateX(-40px); }
+.slide-left.is-visible { opacity: 1; transform: translateX(0); }
+
+.slide-right { transform: translateX(40px); }
+.slide-right.is-visible { opacity: 1; transform: translateX(0); }
