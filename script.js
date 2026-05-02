@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const message = document.getElementById('message').value;
         
         // GANTI DENGAN NOMOR WA PENERIMA RSVP (Gunakan 62 di depan)
-        const phoneNumber = "6282115556180"; 
+        const phoneNumber = "6285786848222"; 
         
         // Format pesan
         const text = `Assalamu'alaikum,%0A%0ASaya *${name}*, ingin mengkonfirmasi bahwa saya *${attendance}* pada acara tasyakuran khitanan.%0A%0AUcapan/Doa:%0A"${message}"%0A%0ATerima kasih.`;
