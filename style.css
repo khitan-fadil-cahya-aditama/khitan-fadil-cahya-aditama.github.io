@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap');
 /* Tema Warna Islamic Modern */
 :root {
     --primary-green: #0f4c3a; /* Hijau Zamrud gelap */
@@ -110,7 +111,144 @@ h2 { font-size: 1.8rem; margin-bottom: 20px; text-align: center; }
 .card hr { margin: 15px 0; border: 0; border-top: 1px solid rgba(212, 175, 55, 0.3); }
 
 /* Gallery Grid */
-.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; justify-items: center; }
+.acara-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.acara-card {
+  background: #f9f6ef;
+  border: 1.5px solid #b8933a;
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  max-width: 360px;
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.acara-card::before {
+  content: '';
+  position: absolute;
+  border: 0.5px solid #b8933a;
+  border-radius: 2px;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: rotate(45deg) scale(1); }
+  50%       { opacity: 0.5; transform: rotate(45deg) scale(0.7); }
+}
+
+.acara-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #b8933a;
+  letter-spacing: 0.05em;
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
+  background: linear-gradient(
+    90deg,
+    #b8933a 0%,
+    #f0d080 40%,
+    #b8933a 60%,
+    #f0d080 80%,
+    #b8933a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.ornament-line {
+  flex: 1;
+  height: 0.5px;
+  background: #b8933a;
+  opacity: 0.5;
+}
+
+.ornament-diamond {
+  width: 6px;
+  height: 6px;
+  background: #b8933a;
+  transform: rotate(45deg);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.detail-row {
+  margin-bottom: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.detail-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #9e7d35;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #4a3b1f;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.detail-value em {
+  font-style: italic;
+  color: #b8933a;
+}
+
+.acara-card              { animation-delay: 0.1s; }
+.ornament.top            { animation-delay: 0.4s; }
+.detail-row:nth-child(3) { animation-delay: 0.6s; }
+.ornament.mid1           { animation-delay: 0.8s; }
+.detail-row:nth-child(5) { animation-delay: 1.0s; }
+.ornament.mid2           { animation-delay: 1.2s; }
+.detail-row:nth-child(7) { animation-delay: 1.4s; }
+.ornament.bot            { animation-delay: 1.6s; }
 
 /* Animasi */
 .animate-on-scroll { opacity: 0; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
