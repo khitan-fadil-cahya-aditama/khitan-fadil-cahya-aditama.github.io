@@ -6,6 +6,7 @@
     <title>Undangan Khitanan - Fulan</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Plus+Jakarta+Sans:wght@300;400;600&family=Amiri&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="floating-ornaments"></div>
@@ -45,24 +46,62 @@
             </div>
       </section>
 
+      <section id="gallery" class="section">
+        <div class="acara-wrap">
+  <div class="acara-card">
+    <div class="acara-title">Detail Acara</div>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line"></div>
+    </div>
+
+    <div class="detail-row">
+      <div class="detail-label">Hari & Tanggal</div>
+      <div class="detail-value">Sabtu, 21 Juni 2026</div>
+    </div>
+
+    <div class="ornament" style="margin: 0.8rem 0;">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line"></div>
+    </div>
+
+    <div class="detail-row">
+      <div class="detail-label">Waktu</div>
+      <div class="detail-value">11.00 – <em>Selesai</em></div>
+    </div>
+
+    <div class="ornament" style="margin: 0.8rem 0;">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line"></div>
+    </div>
+
+    <div class="detail-row">
+      <div class="detail-label">Lokasi</div>
+      <div class="detail-value">Jalan Rogojembangan Timur<br>No. 15, Semarang</div>
+    </div>
+
+    <div class="ornament" style="margin-top: 1.5rem; margin-bottom: 0;">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-diamond" style="margin: 0 -2px;"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line"></div>
+    </div>
+  </div>
+</div>
+      </section>
+
       <section id="prayers" class="section green-bg">
         <div class="animate-on-scroll slide-up text-light">
-          <p class="arabic gold-text">اَللَّهُمَّ فَطَهِّرْهُ مِنَ الذُّنُوْبِ، وَزِدْ فِيْ عُمْرِهِ وَادْفَعِ اْلآفَاتِ عَنْ بَدَنِهِ وَاْلأَوْجَاعِ عَنْ جِسْمِهِ، وَزِدْهُ مِنَ اْلغِنَى وَادْفَعْ عَنْهُ اْلفَقْرَ فَإِنَّكَ تَعْلَمُ وَلَا نَعْلَمُ</p>
+          <p class="arabic gold-text">اَللَّهُمَّ فَطَهِّرْهُ مِنَ الذُّنُوْبِ، وَزِدْ فِيْ عُمْرِهِ وَادْفَعِ اْلآفَاتِ عَنْ بَدَنِهِ وَاْلأَوْجَاعِ عَنْ جِسْمِهِ، وَزِدْهُ مِنَ اْلغِنَى وَادْفَعْ عَنْهُ اْلفَقْرَ فَإِنَّكَ تَعْلَمُ وَلَا نَعْلَمُ</p>
           <p class="translation">"Ya Allah, maka sucikanlah dia dari dosa-dosa. Tambahlah umurnya. Jagalah tubuhnya dari penyakit. Dan tambahlah kekayaan padanya dan jauhkan dari kefakiran. Maka sesungguhnya Engkau Maha Mengetahui sementara kami tidak mengetahui"</p>
         </div>
       </section>
 
-      <!-- <section id="gallery" class="section">
-        <h2 class="animate-on-scroll slide-up title-font gold-text">Potret Momen</h2>
-        <div class="gallery-grid">
-          <img src="https://via.placeholder.com/300x400" alt="Foto 1" class="arch-img-small animate-on-scroll zoom-in" />
-          <img src="https://via.placeholder.com/300x400" alt="Foto 2" class="arch-img-small animate-on-scroll zoom-in delay-1" />
-          <img src="https://via.placeholder.com/300x400" alt="Foto 3" class="arch-img-small animate-on-scroll zoom-in delay-2" />
-          <img src="https://via.placeholder.com/300x400" alt="Foto 4" class="arch-img-small animate-on-scroll zoom-in delay-3" />
-        </div>
-      </section> -->
-
-      <section id="location" class="section green-bg">
+      <section id="location" class="section">
         <h2 class="animate-on-scroll slide-up title-font gold-text">Lokasi Acara</h2>
         <p class="animate-on-scroll slide-up" style="margin-bottom: 20px">Silakan gunakan peta di bawah ini untuk menuju lokasi acara.</p>
         <div class="map-container animate-on-scroll fade-in">
@@ -79,19 +118,7 @@
         <a href="https://maps.google.com/?q=-7.015590,110.451761" target="_blank" class="btn btn-gold animate-on-scroll slide-up">Buka Petunjuk Arah</a>
       </section>
 
-      <!-- <section id="gift" class="section pattern-bg">
-            <h2 class="animate-on-scroll slide-up title-font gold-text">Tanda Kasih</h2>
-            <p class="animate-on-scroll slide-up" style="margin-bottom: 20px;">Bagi keluarga dan sahabat yang ingin memberikan tanda kasih, dapat mengirimkannya melalui fitur di bawah ini:</p>
-            
-            <div class="card animate-on-scroll slide-up">
-                <h4 class="gold-text">Bank BCA</h4>
-                <p id="rek-bca" class="account-number">1234567890</p>
-                <p>a.n. Nama Orang Tua / Anak</p>
-                <button class="btn btn-outline copy-btn" data-rek="1234567890">Salin Nomor Rekening</button>
-            </div>
-        </section> -->
-
-      <section id="rsvp" class="section">
+      <section id="rsvp" class="section green-bg">
         <h2 class="animate-on-scroll slide-up title-font gold-text">Konfirmasi Kehadiran</h2>
         <p class="animate-on-scroll slide-up" style="margin-bottom: 20px">Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
 
